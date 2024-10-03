@@ -1,0 +1,16 @@
+import { ref, set } from "firebase/database";
+import { database } from "./firebaseConfig"; // استيراد قاعدة البيانات
+
+// إضافة بيانات إلى قاعدة البيانات
+const addData = (userId, name, email) => {
+  set(ref(database, 'users/' + userId), {
+    username: name,
+    email: email,
+  })
+  .then(() => {
+    console.log("Data added successfully.");
+  })
+  .catch((error) => {
+    console.error("Error adding data: ", error);
+  });
+};
