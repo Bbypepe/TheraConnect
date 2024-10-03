@@ -1,0 +1,26 @@
+TheraConnect/
+│
+├── android/               # ملفات Flutter الخاصة بـ Android
+├── ios/                   # ملفات Flutter الخاصة بـ iOS
+├── lib/                   # ملفات Flutter الرئيسية
+│   ├── main.dart          # نقطة البداية للتطبيق
+│   ├── auth/              # ملفات المصادقة
+│   │   └── login.dart     # شاشة تسجيل الدخول
+│   ├── models/            # نماذج البيانات
+│   │   └── user.dart      # نموذج بيانات المستخدم
+│   ├── services/          # الخدمات والعمليات
+│   │   ├── firebase_service.dart  # عمليات Firebase
+│   │   └── stream_service.dart    # عمليات البث المباشر
+│   ├── ui/                # واجهات المستخدم
+│   │   ├── home_screen.dart   # الشاشة الرئيسية
+│   │   └── live_stream.dart   # شاشة البث المباشر
+│   └── utils/             # أدوات مساعدة
+│       └── constants.dart  # ثابتات المشروع
+├── web/                   # ملفات Flutter الخاصة بالويب
+├── .gitignore             # ملفات لتجاهلها في GitHub
+├── .eslintrc.js           # إعدادات ESLint لفحص الأكواد
+├── .prettierrc            # إعدادات Prettier لتنظيم الأكواد
+├── firebase.json          # إعدادات Firebase للنشر
+├── netlify.toml           # إعدادات Netlify للنشر
+├── pubspec.yaml           # إعدادات الحزم في Flutter
+└── README.md              # وصف المشروع
