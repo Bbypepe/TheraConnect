@@ -1,0 +1,198 @@
+[debug] [2024-10-03T20:42:03.633Z] ----------------------------------------------------------------------
+[debug] [2024-10-03T20:42:03.635Z] Command:       /usr/local/bin/firebase /home/codespace/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init
+[debug] [2024-10-03T20:42:03.635Z] CLI Version:   13.20.2
+[debug] [2024-10-03T20:42:03.635Z] Platform:      linux
+[debug] [2024-10-03T20:42:03.635Z] Node Version:  v18.5.0
+[debug] [2024-10-03T20:42:03.636Z] Time:          Thu Oct 03 2024 20:42:03 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-10-03T20:42:03.636Z] Env Overrides: GITHUB_API_URL
+[debug] [2024-10-03T20:42:03.636Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-03T20:42:03.695Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-03T20:42:03.695Z] > authorizing via signed-in user (babypepeofficially@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /workspaces/TheraConnect
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-10-03T20:42:13.238Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:13.238Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:13.239Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-10-03T20:42:13.718Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-10-03T20:42:13.718Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project holo-model-app (TheraConnect) 
+[info] 
+=== Dataconnect Setup
+[debug] [2024-10-03T20:42:27.292Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:27.292Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:27.292Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/holo-model-app/billingInfo [none]
+[debug] [2024-10-03T20:42:27.963Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/holo-model-app/billingInfo 200
+[debug] [2024-10-03T20:42:27.964Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/holo-model-app/billingInfo {"name":"projects/holo-model-app/billingInfo","projectId":"holo-model-app","billingAccountName":"","billingEnabled":false}
+[info] i  dataconnect: ensuring required API sqladmin.googleapis.com is enabled... 
+[debug] [2024-10-03T20:42:27.965Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:27.965Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:27.965Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/sqladmin.googleapis.com [none]
+[debug] [2024-10-03T20:42:27.965Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/sqladmin.googleapis.com x-goog-quota-user=projects/holo-model-app
+[debug] [2024-10-03T20:42:28.728Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/sqladmin.googleapis.com 200
+[debug] [2024-10-03T20:42:28.728Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/sqladmin.googleapis.com [omitted]
+[warn] ⚠  dataconnect: missing required API sqladmin.googleapis.com. Enabling now... 
+[debug] [2024-10-03T20:42:28.729Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:28.729Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:28.729Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/sqladmin.googleapis.com:enable [none]
+[debug] [2024-10-03T20:42:28.729Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/sqladmin.googleapis.com:enable x-goog-quota-user=projects/holo-model-app
+[debug] [2024-10-03T20:42:29.753Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/sqladmin.googleapis.com:enable 200
+[debug] [2024-10-03T20:42:29.754Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/sqladmin.googleapis.com:enable [omitted]
+[debug] [2024-10-03T20:42:39.765Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:39.765Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:39.765Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/sqladmin.googleapis.com [none]
+[debug] [2024-10-03T20:42:39.765Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/sqladmin.googleapis.com x-goog-quota-user=projects/holo-model-app
+[debug] [2024-10-03T20:42:40.488Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/sqladmin.googleapis.com 200
+[debug] [2024-10-03T20:42:40.488Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/sqladmin.googleapis.com [omitted]
+[info] ✔  dataconnect: required API sqladmin.googleapis.com is enabled 
+[info] i  Setting placeholder values in dataconnect.yaml. You can edit these before you deploy to specify different IDs or regions. 
+[info] ✔  Wrote dataconnect/dataconnect.yaml 
+[info] ✔  Wrote dataconnect/schema/schema.gql 
+[info] ✔  Wrote dataconnect/connector/connector.yaml 
+[info] ✔  Wrote dataconnect/connector/queries.gql 
+[info] ✔  Wrote dataconnect/connector/mutations.gql 
+[info] ✔  Detected WEB app in directory /workspaces/TheraConnect 
+[info] i  Wrote new config to /workspaces/TheraConnect/dataconnect/connector/connector.yaml 
+[info] i  dataconnect: downloading dataconnect-emulator-1.4.4... {"metadata":{"emulator":{"name":"dataconnect"},"message":"downloading dataconnect-emulator-1.4.4..."}}
+[debug] [2024-10-03T20:42:54.353Z] >>> [apiv2][query] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-linux-v1.4.4 
+[debug] [2024-10-03T20:42:54.574Z] <<< [apiv2][status] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-linux-v1.4.4 200
+[debug] [2024-10-03T20:42:54.574Z] <<< [apiv2][body] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-linux-v1.4.4 [stream]
+[info] I1003 20:42:55.951390   16249 codegen.go:82] [connector "default" javascriptSdk] Generating sources into "/workspaces/TheraConnect/generated/javascript/default"
+I1003 20:42:55.951842   16249 generate.go:40] Generated all sources. Writing them to disk...
+I1003 20:42:55.953032   16249 collector.go:107] connector "default" javascriptSdk wrote into "/workspaces/TheraConnect/generated/javascript/default"
+Generated sources: index.d.ts [264B] esm/index.esm.js [185B] esm/package.json [17B] index.cjs.js [226B] package.json [613B] 
+I1003 20:42:55.953414   16249 installsdk.go:79] Running command: /home/codespace/.cache/firebase/runtime/npm install file:generated/javascript/default
+E1003 20:42:55.953781   16249 installsdk.go:81] Failed to install package: fork/exec /home/codespace/.cache/firebase/runtime/npm: exec format error
+
+[info] i  Generated SDK code for default 
+[info] ✔  If you'd like to generate additional SDKs later, run firebase init dataconnect:sdk 
+[info] 
+[info] 
+=== Firestore Setup
+[debug] [2024-10-03T20:42:55.978Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:55.978Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:55.978Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/firestore.googleapis.com [none]
+[debug] [2024-10-03T20:42:55.978Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/firestore.googleapis.com x-goog-quota-user=projects/holo-model-app
+[debug] [2024-10-03T20:42:56.719Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/firestore.googleapis.com 200
+[debug] [2024-10-03T20:42:56.719Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/firestore.googleapis.com [omitted]
+[debug] [2024-10-03T20:42:56.719Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:56.720Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:56.720Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/holo-model-app/databases/(default) [none]
+[debug] [2024-10-03T20:42:57.375Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/holo-model-app/databases/(default) 200
+[debug] [2024-10-03T20:42:57.375Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/holo-model-app/databases/(default) {"name":"projects/holo-model-app/databases/(default)","uid":"388649e2-6ac1-4019-ab65-ecc61ae93d0f","createTime":"2024-09-28T03:37:27.652730Z","updateTime":"2024-09-28T03:37:27.652730Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-10-03T19:42:57.315800Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IIfK8MuJ84gDMPrCzIbb5IgD"}
+[debug] [2024-10-03T20:42:57.375Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-10-03T20:42:57.375Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-10-03T20:42:57.376Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-03T20:42:57.376Z] > authorizing via signed-in user (babypepeofficially@gmail.com)
+[debug] [2024-10-03T20:42:57.376Z] [iam] checking project holo-model-app for permissions ["firebase.projects.get"]
+[debug] [2024-10-03T20:42:57.376Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:57.376Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:42:57.377Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/holo-model-app:testIamPermissions [none]
+[debug] [2024-10-03T20:42:57.377Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/holo-model-app:testIamPermissions x-goog-quota-user=projects/holo-model-app
+[debug] [2024-10-03T20:42:57.377Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/holo-model-app:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-10-03T20:42:57.952Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/holo-model-app:testIamPermissions 200
+[debug] [2024-10-03T20:42:57.952Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/holo-model-app:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-10-03T20:43:01.733Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:01.733Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:01.733Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/holo-model-app/releases pageSize=10&pageToken=
+[debug] [2024-10-03T20:43:01.951Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/holo-model-app/releases 200
+[debug] [2024-10-03T20:43:01.952Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/holo-model-app/releases {"releases":[{"name":"projects/holo-model-app/releases/cloud.firestore","rulesetName":"projects/holo-model-app/rulesets/d84c10c4-80b7-4efa-bd09-c3510298ba8d","createTime":"2024-09-28T03:37:39.179070Z","updateTime":"2024-09-28T03:37:39.179070Z"}]}
+[debug] [2024-10-03T20:43:01.952Z] Found ruleset: projects/holo-model-app/rulesets/d84c10c4-80b7-4efa-bd09-c3510298ba8d
+[debug] [2024-10-03T20:43:01.952Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:01.953Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:01.953Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/holo-model-app/rulesets/d84c10c4-80b7-4efa-bd09-c3510298ba8d [none]
+[debug] [2024-10-03T20:43:02.253Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/holo-model-app/rulesets/d84c10c4-80b7-4efa-bd09-c3510298ba8d 200
+[debug] [2024-10-03T20:43:02.253Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/holo-model-app/rulesets/d84c10c4-80b7-4efa-bd09-c3510298ba8d [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-10-03T20:43:05.445Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:05.446Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:05.446Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:05.446Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:05.446Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/holo-model-app/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-10-03T20:43:05.449Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/holo-model-app/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-10-03T20:43:05.641Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/holo-model-app/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-10-03T20:43:05.641Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/holo-model-app/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2024-10-03T20:43:06.360Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/holo-model-app/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-10-03T20:43:06.360Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/holo-model-app/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/holo-model-app/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Genkit Setup
+[debug] [2024-10-03T20:43:10.197Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-03T20:43:10.197Z] > authorizing via signed-in user (babypepeofficially@gmail.com)
+[debug] [2024-10-03T20:43:10.197Z] [iam] checking project holo-model-app for permissions ["firebase.projects.get"]
+[debug] [2024-10-03T20:43:10.198Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:10.198Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:10.198Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/holo-model-app:testIamPermissions [none]
+[debug] [2024-10-03T20:43:10.198Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/holo-model-app:testIamPermissions x-goog-quota-user=projects/holo-model-app
+[debug] [2024-10-03T20:43:10.198Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/holo-model-app:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-10-03T20:43:10.775Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/holo-model-app:testIamPermissions 200
+[debug] [2024-10-03T20:43:10.775Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/holo-model-app:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-10-03T20:43:10.776Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:10.776Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:10.776Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:10.776Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:10.776Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-10-03T20:43:10.776Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/holo-model-app
+[debug] [2024-10-03T20:43:10.777Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-10-03T20:43:10.778Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/holo-model-app
+[debug] [2024-10-03T20:43:11.523Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/runtimeconfig.googleapis.com 200
+[debug] [2024-10-03T20:43:11.523Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-10-03T20:43:11.532Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/cloudfunctions.googleapis.com 200
+[debug] [2024-10-03T20:43:11.532Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-10-03T20:43:11.533Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:11.533Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:11.533Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2024-10-03T20:43:11.533Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/holo-model-app
+[debug] [2024-10-03T20:43:12.776Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2024-10-03T20:43:12.776Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2024-10-03T20:43:22.782Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:22.782Z] Checked if tokens are valid: true, expires at: 1727991348987
+[debug] [2024-10-03T20:43:22.782Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-10-03T20:43:22.782Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/holo-model-app
+[debug] [2024-10-03T20:43:23.079Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/cloudfunctions.googleapis.com 200
+[debug] [2024-10-03T20:43:23.080Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/holo-model-app/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/tsconfig.json 
+[info] ✔  Wrote functions/tsconfig.dev.json 
+[info] ✔  Wrote functions/src/index.ts 
+[info] ✔  Wrote functions/.gitignore 

@@ -1,0 +1,38 @@
+{
+  "name": "@firebasegen/default",
+  "version": "1.0.0",
+  "author": "Firebase <firebase-support@google.com> (https://firebase.google.com/)",
+  "description": "Generated SDK for default",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=18.0"  // Ensures the correct version of Node is used
+  },
+  "main": "index.cjs.js",  // Entry point for CommonJS environments (Node.js)
+  "module": "esm/index.esm.js",  // Entry point for ES module environments
+  "browser": "esm/index.esm.js",  // Browser-friendly ES module version
+  "typings": "index.d.ts",  // TypeScript type definitions
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",  // Type definitions for the main module
+      "require": "./index.cjs.js",  // CommonJS export for Node.js environments
+      "default": "./esm/index.esm.js"  // Default ES module export
+    },
+    "./package.json": "./package.json"  // Allows accessing `package.json` in imports
+  },
+  "peerDependencies": {
+    "firebase": "^10.14.0"  // Ensures compatibility with Firebase v10.14.0 or higher
+  },
+  "scripts": {
+    "build": "tsc",  // Build command to compile TypeScript files
+    "start": "node lib/index.js"  // Start command to run the compiled project
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/firebase/firebase-js-sdk"
+  },
+  "keywords": [
+    "firebase",
+    "sdk",
+    "default"
+  ]
+}
