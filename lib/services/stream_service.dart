@@ -2,19 +2,33 @@ import 'package:flutter_webrtc/flutter_webrtc.dart';
 
 class StreamService {
   RTCVideoRenderer _localRenderer = RTCVideoRenderer();
+  MediaStream? _localStream;
 
-  // تهيئة البث
+  // Initialize the video renderer
   Future<void> initRenderer() async {
     await _localRenderer.initialize();
   }
 
-  // بدء البث
+  // Start the live stream
   Future<void> startLiveStream() async {
-    // قم بإضافة تكامل WebRTC هنا لبدء البث
+    // Request access to the user's camera and microphone
+    _localStream = await navigator.mediaDevices.getUserMedia({
+      'audio': true,
+      'video': true,
+    });
+
+    // Attach the local stream to the video renderer
+    _localRenderer.srcObject = _localStream;
   }
 
-  // إنهاء البث
+  // Stop the live stream
   Future<void> stopLiveStream() async {
+    // Stop all tracks of the local stream
+    _localStream?.getTracks().forEach((track) {
+      track.stop();
+    });
+
+    // Dispose of the video renderer
     _localRenderer.dispose();
   }
 }

@@ -3,30 +3,34 @@ name: Deploy to Netlify
 on:
   push:
     branches:
+      - main  # Change this if you are using a different branch
+  pull_request:
+    branches:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v1
+      - name: Install Node.js
+        uses: actions/setup-node@v2
         with:
-          flutter-version: 'stable'
+          node-version: '14'  # Specify your preferred Node.js version
 
       - name: Install dependencies
-        run: flutter pub get
+        run: npm install  # Use 'yarn install' if you are using Yarn
 
-      - name: Build web
-        run: flutter build web
+      - name: Build the app
+        run: npm run build  # Use 'yarn build' if you are using Yarn
 
       - name: Deploy to Netlify
-        uses: netlify/actions/cli@master
+        uses: netlify/actions/setup-netlify@v1
         with:
-          args: deploy --prod --dir=build/web
+          publish-dir: ./build  # Ensure this path matches your build output directory
+          production-deploy: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

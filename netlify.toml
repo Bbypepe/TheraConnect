@@ -1,5 +1,5 @@
 [build]
-  command = "flutter build web"
+  command = "bash build.sh"  # Call the custom build script
   publish = "build/web"
 
 [[redirects]]

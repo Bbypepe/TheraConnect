@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 void main() async {
   // Ensure Flutter is initialized before using any plugins
   WidgetsFlutterBinding.ensureInitialized();
-  
+
   // Initialize Firebase
   await Firebase.initializeApp();
-  
+
   // Get the Firebase Messaging instance
   FirebaseMessaging messaging = FirebaseMessaging.instance;
 
@@ -29,8 +29,17 @@ void main() async {
     print('User granted provisional permission for notifications.');
   }
 
+  // Optionally, you can handle the initial message when the app is opened from a terminated state
+  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+
   // Run the app
   runApp(MyApp());
+}
+
+// Background message handler
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  // Handle background messages here
+  print('Handling a background message: ${message.messageId}');
 }
 
 class MyApp extends StatelessWidget {
