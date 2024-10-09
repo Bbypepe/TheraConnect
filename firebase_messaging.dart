@@ -5,19 +5,18 @@ class NotificationService {
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
 
   void initialize() {
-    // استقبال الإشعارات أثناء فتح التطبيق
+    // Handle messages received while the app is in the foreground
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       print('Received a message: ${message.notification?.title}');
     });
 
-    // التعامل مع الإشعارات عند فتح التطبيق عبر الإشعار
+    // Handle notification taps when the app is opened from a notification
     FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
       print('Notification clicked: ${message.notification?.title}');
     });
   }
 
   Future<void> sendNotification(String token, String title, String body) async {
-    // من هنا يمكنك استخدام الخادم أو خدمة خارجية لإرسال إشعارات.
+    // Here, you can use a server or external service to send notifications.
   }
 }
-

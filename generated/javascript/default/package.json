@@ -2,37 +2,24 @@
   "name": "@firebasegen/default",
   "version": "1.0.0",
   "author": "Firebase <firebase-support@google.com> (https://firebase.google.com/)",
-  "description": "Generated SDK for default",
+  "description": "Generated SDK For default",
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=18.0"  // Ensures the correct version of Node is used
+    "node": ">=18.0"
   },
-  "main": "index.cjs.js",  // Entry point for CommonJS environments (Node.js)
-  "module": "esm/index.esm.js",  // Entry point for ES module environments
-  "browser": "esm/index.esm.js",  // Browser-friendly ES module version
-  "typings": "index.d.ts",  // TypeScript type definitions
+  "typings": "index.d.ts",
+  "module": "esm/index.esm.js",
+  "main": "index.cjs.js",
+  "browser": "esm/index.esm.js",
   "exports": {
     ".": {
-      "types": "./index.d.ts",  // Type definitions for the main module
-      "require": "./index.cjs.js",  // CommonJS export for Node.js environments
-      "default": "./esm/index.esm.js"  // Default ES module export
+      "types": "./index.d.ts",
+      "require": "./index.cjs.js",
+      "default": "./esm/index.esm.js"
     },
-    "./package.json": "./package.json"  // Allows accessing `package.json` in imports
+    "./package.json": "./package.json"
   },
   "peerDependencies": {
-    "firebase": "^10.14.0"  // Ensures compatibility with Firebase v10.14.0 or higher
-  },
-  "scripts": {
-    "build": "tsc",  // Build command to compile TypeScript files
-    "start": "node lib/index.js"  // Start command to run the compiled project
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/firebase/firebase-js-sdk"
-  },
-  "keywords": [
-    "firebase",
-    "sdk",
-    "default"
-  ]
+    "firebase": "^10.14.0"
+  }
 }

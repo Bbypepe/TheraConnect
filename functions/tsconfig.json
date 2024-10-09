@@ -1,22 +1,15 @@
 {
   "compilerOptions": {
-    "module": "commonjs",           // Using CommonJS for Node.js
-    "noImplicitReturns": true,      // Ensures functions explicitly return a value or nothing
-    "noUnusedLocals": true,         // Warns about local variables that are declared but never used
-    "noUnusedParameters": true,     // Warns about function parameters that are declared but never used
-    "outDir": "./lib",              // Output directory for compiled files
-    "sourceMap": true,              // Allows debugging of TypeScript files
-    "strict": true,                 // Enables all strict type checking options
-    "esModuleInterop": true,        // Enables ES module interoperability for importing
-    "forceConsistentCasingInFileNames": true, // Ensures file name casing consistency
-    "skipLibCheck": true,           // Skips type checking of declaration files for faster build times
-    "target": "es2017",             // Targets ES2017 (async/await support)
-    "lib": ["es2017", "dom"],       // Specifies the libraries available during compilation (ES2017 & DOM)
-    "moduleResolution": "node",     // Ensures proper module resolution for Node.js modules
-    "allowSyntheticDefaultImports": true, // Allows default imports from modules with no default export
-    "resolveJsonModule": true       // Enables importing of `.json` files
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017"
   },
-  "compileOnSave": true,             // Re-compiles the project when saving TypeScript files
-  "include": ["src"],                // Includes files in the `src` directory for compilation
-  "exclude": ["node_modules"]        // Excludes `node_modules` from being compiled
+  "compileOnSave": true,
+  "include": [
+    "src"
+  ]
 }

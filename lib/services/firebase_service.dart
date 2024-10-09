@@ -12,21 +12,21 @@ class FirebaseService {
     await Firebase.initializeApp();
   }
 
-  // دوال المصادقة
+  // Authentication methods
   Future<User?> signIn(String email, String password) async {
     try {
       UserCredential userCredential = await auth.signInWithEmailAndPassword(
         email: email,
         password: password,
       );
-      return userCredential.user;
+      return userCredential.user; // Use the user property from UserCredential
     } catch (e) {
       print("Error signing in: $e");
       return null;
     }
   }
 
-  // دوال إدارة المستخدمين
+  // User management methods
   Future<void> saveUserData(User user, Map<String, dynamic> data) async {
     await db.collection("users").doc(user.uid).set(data);
   }

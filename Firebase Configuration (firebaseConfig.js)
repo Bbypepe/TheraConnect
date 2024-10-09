@@ -1,4 +1,4 @@
-// Import the Firebase SDKs needed
+// Import the necessary modules from Firebase SDK
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
@@ -6,16 +6,16 @@ import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 import { getDatabase } from "firebase/database";
 
-// Your web app's Firebase configuration
+// Your Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCmDBCCNGYE-CQqG-EBu8cc5pb8XCsO3FE",
   authDomain: "holo-model-app.firebaseapp.com",
   databaseURL: "https://holo-model-app-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "holo-model-app",
-  storageBucket: "gs://holo-model-app.appspot.com",
+  storageBucket: "holo-model-app.appspot.com",
   messagingSenderId: "260770453134",
   appId: "1:260770453134:web:e63273cf5e28ff3ba61bdf",
-  measurementId: "G-Q0F1BCN0GC"
+  measurementId: "G-Q0F1BCN0GC" // Ensure this value is correct
 };
 
 // Initialize Firebase
@@ -26,4 +26,14 @@ const auth = getAuth(app);
 const storage = getStorage(app);
 const database = getDatabase(app);
 
+// Test the connection
+auth.onAuthStateChanged((user) => {
+  if (user) {
+    console.log("User is logged in:", user);
+  } else {
+    console.log("No user is logged in");
+  }
+});
+
+// Export the modules
 export { app, analytics, firestore, auth, storage, database };

@@ -1,13 +1,22 @@
 {
   "dependencies": {
+    "@firebasegen/default": "file:generated/javascript/default",
     "firebase": "^10.14.0",
     "firebase-functions": "^6.0.1"
   },
   "devDependencies": {
+    "@babel/generator": "^7.25.7",
+    "@babel/parser": "^7.25.7",
+    "@babel/template": "^7.25.7",
+    "@babel/traverse": "^7.25.7",
+    "@babel/types": "^7.25.7",
     "@types/istanbul-lib-coverage": "^2.0.6",
     "@types/json-schema": "^7.0.15",
     "@types/lodash": "^4.17.10",
     "@types/semver": "^7.5.8",
     "@types/yargs": "^17.0.33"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js,.ts ."
   }
 }
