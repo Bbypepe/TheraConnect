@@ -24,5 +24,5 @@ This project is a live streaming platform built using Flutter, Firebase, and Web
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/livestream_app.git
-   cd livestream_app
+   git clone https://github.com/Bbypepe/TheraConnect.git
+   cd TheraConnect

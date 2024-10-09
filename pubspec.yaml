@@ -1,10 +1,10 @@
-name: theraconnect
-description: A new Flutter project.
+name: livestream_app
+description: A live streaming app with interactive challenges and gifting system.
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.18.0 <4.0.0"
+  sdk: ">=2.17.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -13,7 +13,12 @@ dependencies:
   firebase_auth: ^5.8.0  # Use a compatible version
   cloud_firestore: ^5.9.0  # Use a compatible version
   firebase_storage: ^11.4.0  # Use the latest version
-  livekit_client: ^2.2.6  # Use the latest version
+  provider: ^6.0.0
+  webrtc: ^0.9.7
+  flutter_webrtc: ^0.7.0
+  socket_io_client: ^1.0.0
+  google_fonts: ^3.0.0
+  flutter_local_notifications: ^10.0.0
 
 dev_dependencies:
   flutter_test:
@@ -21,3 +26,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
