@@ -9,7 +9,7 @@
     "@babel/parser": "^7.25.7",
     "@babel/template": "^7.25.7",
     "@babel/traverse": "^7.25.7",
-    "@babel/types": "^7.25.7",
+    "@babel/types": "^7.25.8",
     "@types/istanbul-lib-coverage": "^2.0.6",
     "@types/json-schema": "^7.0.15",
     "@types/lodash": "^4.17.10",
