@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@firebasegen/default": "file:generated/javascript/default",
-    "firebase": "^10.14.0",
+    "firebase": "^10.14.1",
     "firebase-functions": "^6.0.1"
   },
   "devDependencies": {
